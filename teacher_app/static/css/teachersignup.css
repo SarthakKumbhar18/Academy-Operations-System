@@ -1,0 +1,102 @@
+/* General Body Styling */
+body {
+    background: linear-gradient(to right, #f8c8dc, #d4a5ff);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #a04ec6;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffccff;
+}
+
+/* Signup Container */
+.signup-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+h2 {
+    color: #a04ec6;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: #8a2be2;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #d4a5ff;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fdf7ff;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #b57edc;
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.3);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    color: #8a2be2;
+    border: 2px solid #8a2be2;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #8a2be2;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .signup-container {
+        width: 90%;
+    }
+}

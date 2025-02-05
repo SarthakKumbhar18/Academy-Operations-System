@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        .details {
+            width: 60%;
+            margin: 0 auto;
+            text-align: left;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .details p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .back-btn {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Subject: {{data.Name}}</h2>
+    <div class="details">
+        <p><strong>Trainer Name:</strong> {{data.Trainer}}</p>
+        <p><strong>Duration:</strong> {{data.Duration}} Months</p>
+        <p><strong>Syllabus:</strong> {{data.Syllabus}}</p>
+        <p><strong>Fees:</strong> ₹ {{data.Fees}}</p>
+    </div>
+    <a href="{% url 'subject_list' %}">
+    <button class="back-btn" >Back</button>
+    </a>
+    
+</body>
+</html>

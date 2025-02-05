@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Sign In</title>
+    <link rel="stylesheet" href="{% static 'css/studentsignin.css' %}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Academic Operations System</a>
+            <ul class="nav-links">
+                <li><a href="{% url 'home_view' %}">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="signin-container">
+        <h2 class="signin-title">Student Sign In</h2>
+        <form action="" method="POST" class="signin-form">
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="student_id">Student ID</label>
+                <input type="text" id="student_id" name="student_id" required>
+            </div>
+
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="signin-btn">Sign In</button>
+        </form>
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <div class="alert alert-danger">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="signup-link">
+            <p>Don't have an account? <a href="{% url 'student_signup'%}">Sign up</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

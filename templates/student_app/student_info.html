@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Student | Student Information</title>
+    <link rel="stylesheet" href="{% static 'css/studentinfo.css'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Academic Operations System</a>
+            <ul class="nav-links">
+                <li><a href="{% url 'student_home' %}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="card student-card">
+            <div class="card-body">
+                <h2 class="card-title text-center">Student Information</h2>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Name</th>
+                        <td>{{data.Name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Course</th>
+                        <td>{{data.Course}}</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth</th>
+                        <td>{{data.Dob}}</td>
+                    </tr>
+                    <tr>
+                        <th>Email ID</th>
+                        <td>{{data.Emailid}}</td>
+                    </tr>
+                    <tr>
+                        <th>Phone Number</th>
+                        <td>+1234567890</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td>123, Main Street, City</td>
+                    </tr>
+                </table>
+                <div class="text-center">
+                    <a href="{% url 'student_edit' data.Student_Id %}"><button class="btn edit-btn">Edit</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

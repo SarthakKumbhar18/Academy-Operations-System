@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Student | Home </title>
+    <link rel="stylesheet" href="{% static 'css/studenthome.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Academic Operations System</a>
+            <ul class="nav-links">
+                <li><a href="{% url 'home_view' %}">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1 class="title">Welcome</h1>
+        <p class="subtitle">Choose an option to continue</p>
+        <div class="buttons">
+            <a href="{% url 'student_signin' %}" class="btn signin">Sign In</a>
+            <a href="{% url 'student_signup' %}" class="btn signup">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>

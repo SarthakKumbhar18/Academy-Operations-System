@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #e0eafc, #cfdef3); /* Soft gradient background */
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid #4B0082; /* Violet border */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+h1 {
+    text-align: center;
+    color: #4B0082; /* Violet color for header */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #4B0082;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"], input[type="date"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #4B0082; /* Violet border for inputs */
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, input[type="email"]:focus {
+    border-color: #0000FF; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); /* Blue glow effect */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.submit-btn, .back-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn {
+    background-color: #0000FF; /* Blue button */
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #1E90FF; /* Lighter blue on hover */
+    transform: translateY(-2px); /* Slight move up on hover */
+}
+
+.back-btn {
+    background-color: #4B0082; /* Violet button */
+    color: white;
+}
+
+.back-btn:hover {
+    background-color: #8A2BE2; /* Lighter violet on hover */
+    transform: translateY(-2px); /* Slight move up on hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .submit-btn, .back-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
